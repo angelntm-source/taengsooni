@@ -1,0 +1,14 @@
+/* Video Desc Wrapper */
+.video-desc-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+/* Remove margin from the text inside the wrapper to avoid double spacing */
+.video-desc-wrapper .emphasized-section-desc {
+    margin-bottom: 0 !important;
+    text-align: center;
+}
