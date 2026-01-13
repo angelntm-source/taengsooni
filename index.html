@@ -13,6 +13,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&family=Pretendard+Std:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script>
+        window.addEventListener('load', () => {
+            console.log('Environment Check:', {
+                termsLink: !!document.getElementById('terms-link'),
+                privacyLink: !!document.getElementById('privacy-link'),
+                termsModal: !!document.getElementById('terms-modal'),
+                privacyModal: !!document.getElementById('privacy-modal')
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -401,7 +411,7 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

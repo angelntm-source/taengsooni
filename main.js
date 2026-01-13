@@ -1,6 +1,7 @@
 // Main JS
+console.log('Main.js execution started...');
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('TAENG SOO NI - Site Initialized');
+    console.log('TAENG SOO NI - DOM Content Loaded');
 
     // 1. Intersection Observer for Animations
     const observer = new IntersectionObserver((entries) => {
@@ -81,10 +82,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const closeBtn = modal.querySelector('.modal-close');
 
             link.addEventListener('click', (e) => {
+                console.log(`Link clicked: ${trigger.linkId}`);
                 e.preventDefault();
                 modal.classList.add('active');
                 document.body.classList.add('modal-open');
-                console.log(`Modal opened: ${trigger.modalId}`);
+                console.log(`Modal class added: ${trigger.modalId}`);
+
+                // Final check - ensure it's visible
+                const computedDisplay = window.getComputedStyle(modal).display;
+                console.log(`Modal computed display: ${computedDisplay}`);
             });
 
             const closeModal = () => {
