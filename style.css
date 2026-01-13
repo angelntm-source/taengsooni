@@ -236,10 +236,12 @@ ul {
 }
 
 .logo {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     color: var(--color-primary);
-    font-family: var(--font-serif);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
     flex: 1;
     /* Occupy left space */
 }
@@ -580,29 +582,7 @@ ul {
     padding: 1rem;
 }
 
-/* Responsive for Set Banner */
-@media (max-width: 768px) {
-    .set-banner {
-        flex-direction: column;
-        padding: 2rem;
-        text-align: center;
-    }
 
-    .set-image {
-        margin-top: 2rem;
-    }
-
-    .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 2rem;
-    }
-
-    .hero-text {
-        padding-right: 0;
-        margin-top: 2rem;
-    }
-}
 
 /* Footer */
 .footer {
@@ -612,9 +592,12 @@ ul {
 }
 
 .footer-logo {
-    font-weight: 700;
-    color: var(--color-secondary);
-    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 /* Inquiry Form */
@@ -634,11 +617,7 @@ ul {
     margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 .form-group {
     display: flex;
@@ -849,4 +828,108 @@ body.modal-open {
 .agreement-text {
     color: #444;
     font-weight: 500;
+}
+
+/* Responsive Section - Moved to end for proper cascading */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .set-banner {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Header optimization */
+    .header-inner {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .nav {
+        position: static;
+        transform: none;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .nav a {
+        margin: 0.5rem !important;
+        font-size: 1.1rem !important;
+    }
+
+    .sns-links {
+        justify-content: center !important;
+        padding-right: 0 !important;
+    }
+
+    /* Hero section */
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-top: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        word-break: keep-all;
+    }
+
+    /* Grid layouts */
+    .product-grid,
+    .review-grid,
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .review-photos {
+        flex-wrap: wrap;
+    }
+
+    /* Set Banner */
+    .set-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .set-image {
+        margin-top: 2rem;
+    }
+
+    /* Section padding */
+    .section-padding {
+        padding: 4rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .emphasized-section-desc {
+        margin-bottom: 3rem !important;
+    }
+
+    /* Inquiry Form */
+    .inquiry-form-wrapper {
+        padding: 2.5rem 1.5rem;
+    }
 }
